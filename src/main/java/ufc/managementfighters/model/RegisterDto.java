@@ -20,11 +20,12 @@ public class RegisterDto {
     @Email
     private String email;
 
+    @NotEmpty
     private String phone;
 
     private String address;
 
-    @Size(min = 8,message = "Minium password length is 6 characters")
+    @Size(min = 8,message = "Minimum password length is 6 characters")
     private String password;
 
 
@@ -68,7 +69,7 @@ public class RegisterDto {
     }
 
     /**
-     * @param emai the emai to set
+     * @param email the emai to set
      */
     public void setEmail(String email) {
         this.email = email;

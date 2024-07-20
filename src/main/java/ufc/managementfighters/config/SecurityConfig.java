@@ -40,10 +40,10 @@ public class SecurityConfig {
 
                 // Redirect the user if successfull authentication
                             .defaultSuccessUrl("/",true)
+                            
                 )
                 .logout(config-> config.logoutSuccessUrl("/"))
                 // Redirect the user if log the fuck out
-
                 .build();
     }
 
