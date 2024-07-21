@@ -10,17 +10,17 @@ public class RegisterDto {
 
 
     
-    @NotEmpty
+    @NotEmpty(message = "This field cannot be empty")
     private String firstName;
 
-    @NotEmpty
+    @NotEmpty(message = "This field cannot be empty")
     private String lastName;
 
-    @NotEmpty
+    @NotEmpty(message = "This field cannot be empty")
     @Email
     private String email;
 
-    @NotEmpty
+    @NotEmpty(message = "This field cannot be empty")
     private String phone;
 
     private String address;
@@ -28,7 +28,10 @@ public class RegisterDto {
     @Size(min = 8,message = "Minimum password length is 6 characters")
     private String password;
 
-
+    @ValidPassword
+    @PasswordValueMatch
+    @Size(min = 8,message = "Minimum password length is 6 characters")
+    @NotBlank(message = "Confirm Password is mandatory")
     private String confirmPassword;
 
 
