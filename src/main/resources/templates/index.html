@@ -15,12 +15,13 @@
                 <div class="flex space-x-4">
                     <img src="image/logo.png" alt="ufc-logo" class="size-14 mb-4">
                     <a href="#" class="text-gray-600 hover:text-gray-900 mt-3 font-semibold">Home</a>
-                    <a href="/contact" class="text-gray-600 hover:text-gray-900 mt-3 font-semibold">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 mt-3 font-semibold">Contact</a>
                 </div>
 
-                <!-- Right Buttons -->
+                <!-- Right Buttons // If user is authneticated  -->
                 <div class="flex space-x-4 items-center" sec:authorize="isAuthenticated()">
-                    <!-- Bouton User -->
+
+                    <!-- USER BUTTON  -->
                     <ul class="flex items-center" sec:authorize="isAuthenticated()">
                         <li class="relative group">
                             <button data-dropdown-toggle="dropdown" class="flex items-center dark:focus:ring-blue-800 bg-blue-600 hover:bg-blue-400 text-slate-50 focus:outline-none px-4 py-2 rounded-md">

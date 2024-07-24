@@ -43,7 +43,6 @@
                         alertBox.style.display = 'none';
                     }, 500);
                 }
-
             </script>
 
             <form method="post" th:object="${registerDto}" class="space-y-6">
@@ -53,7 +52,7 @@
                     <label class="lg:w-1/3 mb-2 lg:mb-0">First Name*</label>
                     <div class="lg:w-2/3">
                         <input class="form-control w-full p-2 border rounded" th:field="${registerDto.firstName}">
-                        <p th:if="${#fields.hasErrors('firstName')}" th:errorclass="text-red-700  " th:errors="${registerDto.firstName}"></p>
+                        <p th:if="${#fields.hasErrors('firstName')}" th:errorclass="text-red-700" th:errors="${registerDto.firstName}"></p>
                     </div>
                 </div>
     
