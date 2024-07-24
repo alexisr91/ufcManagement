@@ -8,6 +8,8 @@ class ManagementfightersApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+		
 	}
 
 }

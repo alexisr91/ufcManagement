@@ -20,9 +20,9 @@ public class HomeController {
         return "contact";
     }
 
-    @GetMapping(value="/profile")
-    public String profile() {
-        return "profile";
-    }
+    // @GetMapping(value="/profile")
+    // public String profile() {
+    //     return "profile";
+    // }
     
 }

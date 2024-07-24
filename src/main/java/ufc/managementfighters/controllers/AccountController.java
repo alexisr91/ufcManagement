@@ -15,9 +15,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 /*
  * Controller works with Thymeleaf if not you have to put the Rest Controller to debug the White label error page so you have to install the dependenie Thymeleaf 
+ * This class also is the file to render dynamically with Thymeleaf 
  */
 @Controller
 public class AccountController {
@@ -34,6 +37,21 @@ public class AccountController {
         model.addAttribute("success", false);
         return "register";
     }
+
+    @GetMapping(value = "/profile")
+        public String getUserProfile(Model model, @RequestParam String email){
+            
+            AppUser user = repo.findByEmail(email);
+            if(user != null){
+                model.addAttribute("user", user);
+            }else{
+                model.addAttribute("error", "User not found");
+            }
+
+            return "profile";
+        }
+    
+    
    
     @PostMapping("/register")
     public String register(
