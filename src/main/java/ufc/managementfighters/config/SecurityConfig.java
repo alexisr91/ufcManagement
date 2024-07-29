@@ -31,6 +31,7 @@ public class SecurityConfig {
                             .requestMatchers("/store/**").permitAll()
                             .requestMatchers("/register").permitAll() 
                             .requestMatchers("/login").permitAll() 
+                            .requestMatchers("/profile").permitAll()
                             .requestMatchers("/logout").permitAll()
                             .requestMatchers("/image/**").permitAll()
                             .anyRequest().authenticated()

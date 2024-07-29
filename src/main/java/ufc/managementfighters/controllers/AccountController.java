@@ -14,6 +14,8 @@ import ufc.managementfighters.repository.AppUserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -38,10 +40,11 @@ public class AccountController {
         return "register";
     }
 
-    @GetMapping(value = "/profile")
-        public String getUserProfile(Model model, @RequestParam String email){
+    @GetMapping("/profile")
+        public String getUserProfile(Model model, @RequestParam(required = false) String name){
             
-            AppUser user = repo.findByEmail(email);
+            AppUser user = repo.findByEmail(name);
+
             if(user != null){
                 model.addAttribute("user", user);
             }else{
@@ -91,7 +94,6 @@ public class AccountController {
                 newUser.setLastName(registerDto.getLastName());
                 newUser.setEmail(registerDto.getEmail());
                 newUser.setPhone(registerDto.getPhone());
-                newUser.setAddress(registerDto.getAddress());
                 newUser.setRole("client");
                 newUser.setCreatedAt(new Date());
                 newUser.setPassword(bCryptEncoder.encode(registerDto.getPassword()));

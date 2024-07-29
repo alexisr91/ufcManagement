@@ -23,7 +23,6 @@ public class RegisterDto {
     @NotEmpty(message = "This field cannot be empty")
     private String phone;
 
-    private String address;
 
     @Size(min = 8,message = "Minimum password length is 6 characters")
     private String password;
@@ -92,20 +91,7 @@ public class RegisterDto {
         this.phone = phone;
     }
 
-    /**
-     * @return String return the address
-     */
-    public String getAddress() {
-        return address;
-    }
-
-    /**
-     * @param address the address to set
-     */
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
+   
     /**
      * @return String return the password
      */

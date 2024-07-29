@@ -50,7 +50,7 @@
 
                 <!-- Register / Login Links -->
                 <div class="flex space-x-4" sec:authorize="!isAuthenticated()">
-                    <a href="/register" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-300">Register</a>
+                    <a href="/register" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-300"><sec:csrfInput />Register</a>
                     <a href="/login" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-300">Login</a>
                 </div>
             </div>
