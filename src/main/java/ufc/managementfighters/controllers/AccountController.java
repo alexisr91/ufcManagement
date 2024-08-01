@@ -53,7 +53,7 @@ public class AccountController {
     // }
     
 
-    @GetMapping("/profile")
+    @GetMapping("/profile/{email}")
         
         public String getUserProfile(@PathVariable String email, Model model){
             
