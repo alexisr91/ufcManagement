@@ -9,7 +9,6 @@ import jakarta.validation.constraints.*;
 public class RegisterDto {
 
 
-    
     @NotEmpty(message = "This field cannot be empty")
     private String firstName;
 

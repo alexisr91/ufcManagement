@@ -13,11 +13,15 @@ import ufc.managementfighters.model.RegisterDto;
 import ufc.managementfighters.repository.AppUserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
 import jakarta.validation.Valid;
+// import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestParam;
+
+
 
 
 /*
@@ -40,11 +44,23 @@ public class AccountController {
         return "register";
     }
 
-    @GetMapping("/profile")
-        public String getUserProfile(Model model, @RequestParam(required = false) String name){
-            
-            AppUser user = repo.findByEmail(name);
+    // @GetMapping("/index")
+    // public String index(String email, Model model) {
 
+    //     AppUser user = repo.findByEmail(email);
+    //     model.addAttribute("user", user);
+    //     return "index";
+    // }
+    
+
+    @GetMapping("/profile")
+        
+        public String getUserProfile(@PathVariable String email, Model model){
+            
+                
+            System.out.println("L'email est  :" + email);
+            AppUser user = repo.findByEmail(email);
+            System.out.println("the email is :" + email);
             if(user != null){
                 model.addAttribute("user", user);
             }else{

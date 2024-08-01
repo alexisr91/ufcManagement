@@ -7,7 +7,7 @@
     <title>Profil</title>
 </head>
 <body>
-    <h1 th:if="${user != null}">Profil de <span th:text="${user.firstName}"></span></h1>
+    <h1 th:if="${user != null}">Profil de <span th:text="${user.email}"></span></h1>
     <h1 th:if="${user == null}">Profil de <span th:text="${error}">User not found !!!</span></h1>
 </body>
 </html>

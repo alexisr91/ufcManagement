@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableWebSecurity
+// @EnableWebSecurity ENABLE IT FOR THE URL PATH
 public class SecurityConfig {
 
     /**
@@ -44,7 +44,7 @@ public class SecurityConfig {
                             
                 )
                 .logout(config-> config.logoutSuccessUrl("/"))
-                // Redirect the user if log the fuck out
+                // Redirect the user if log the f out
                 .build();
     }
 
