@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-// @EnableWebSecurity ENABLE IT FOR THE URL PATH
+@EnableWebSecurity //ENABLE IT FOR THE URL PATH
 public class SecurityConfig {
 
     /**
@@ -31,7 +31,7 @@ public class SecurityConfig {
                             .requestMatchers("/store/**").permitAll()
                             .requestMatchers("/register").permitAll() 
                             .requestMatchers("/login").permitAll() 
-                            .requestMatchers("/profile").permitAll()
+                            .requestMatchers("/profile/**").permitAll()
                             .requestMatchers("/logout").permitAll()
                             .requestMatchers("/image/**").permitAll()
                             .anyRequest().authenticated()

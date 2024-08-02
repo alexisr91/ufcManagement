@@ -44,20 +44,11 @@ public class AccountController {
         return "register";
     }
 
-    // @GetMapping("/index")
-    // public String index(String email, Model model) {
 
-    //     AppUser user = repo.findByEmail(email);
-    //     model.addAttribute("user", user);
-    //     return "index";
-    // }
-    
 
     @GetMapping("/profile/{email}")
-        
         public String getUserProfile(@PathVariable String email, Model model){
             
-                
             System.out.println("L'email est  :" + email);
             AppUser user = repo.findByEmail(email);
             System.out.println("the email is :" + email);
