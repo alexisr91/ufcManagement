@@ -33,7 +33,7 @@
                             </button>
                             <ul class="absolute right-0 hidden mb-3 space-y-2 bg-white border border-gray-200 rounded-lg shadow-lg group-hover:block bg-zinc-800">
                                 <!-- user.email doesn't work because I don't have a user object to render -->
-                                <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-300 hover:text-slate-800 text-white" th:href="@{'/profile?email=' + ${#authentication.getPrincipal().getEmail()}}">Profile</a></li>
+                                <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-300 hover:text-slate-800 text-white" th:href="@{/profile(email=${#authentication.name})}">Profile</a></li>
                                 <!-- <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-300 hover:text-slate-800 text-white" th:href="@{/profile/{email}(email=${user.email})}">Profile</a></li>  -->
                                                                                                                                <!--th:href= "@{/profile/{email}(email=${user.email})} " -->     
                                 <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-300 hover:text-slate-800 text-white" href="#">Home</a></li>
