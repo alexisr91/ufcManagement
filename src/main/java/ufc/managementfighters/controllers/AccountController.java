@@ -30,10 +30,17 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class AccountController {
+
+
+    private final AppUserRepository repo;
     
 
-    @Autowired
-    private AppUserRepository repo;
+    public AccountController(AppUserRepository repo){
+        
+        this.repo = repo;
+
+    }
+
 
     @GetMapping("/register")
     public String register(Model model) {
@@ -46,8 +53,8 @@ public class AccountController {
 
 
 
-    @GetMapping("/profile/{email}")
-        public String getUserProfile(@PathVariable String email, Model model){
+    @GetMapping("/profile")
+        public String getUserProfile(@RequestParam(required = true) String email, Model model){
             
             System.out.println("L'email est  :" + email);
             AppUser user = repo.findByEmail(email);
