@@ -29,6 +29,7 @@ public class AppUser {
     private String phone;
     private String address;
     private String password;
+    private String image;
     private String role;
     private Date createdAt;
 
@@ -156,6 +157,22 @@ public class AppUser {
      */
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    /**
+     * @param image the image to set
+     */
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
+    /**
+     * @return String return the image
+     */
+    public String getImage() {
+        return image;
     }
 
 }

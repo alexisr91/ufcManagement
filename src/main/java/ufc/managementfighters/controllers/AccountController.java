@@ -2,7 +2,6 @@ package ufc.managementfighters.controllers;
 
 import java.util.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +12,6 @@ import ufc.managementfighters.model.RegisterDto;
 import ufc.managementfighters.repository.AppUserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -108,6 +106,7 @@ public class AccountController {
                 newUser.setLastName(registerDto.getLastName());
                 newUser.setEmail(registerDto.getEmail());
                 newUser.setPhone(registerDto.getPhone());
+                newUser.setImage(registerDto.getImage());
                 newUser.setRole("client");
                 newUser.setCreatedAt(new Date());
                 newUser.setPassword(bCryptEncoder.encode(registerDto.getPassword()));
