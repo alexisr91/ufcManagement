@@ -29,7 +29,7 @@ public class AppUser {
     private String phone;
     private String address;
     private String password;
-    private String image;
+    private byte[] image;
     private String role;
     private Date createdAt;
 
@@ -159,20 +159,21 @@ public class AppUser {
         this.createdAt = createdAt;
     }
 
+    
+
+
+    /**
+     * @return byte[] return the image
+     */
+    public byte[] getImage() {
+        return image;
+    }
+
     /**
      * @param image the image to set
      */
-
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
-    }
-
-
-    /**
-     * @return String return the image
-     */
-    public String getImage() {
-        return image;
     }
 
 }

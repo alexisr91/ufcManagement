@@ -23,7 +23,7 @@ public class RegisterDto {
     private String phone;
 
     @NotEmpty(message = "This field cannot be empty")
-    private String image;
+    private byte[] image;
 
 
     @Size(min = 8,message = "Minimum password length is 6 characters")
@@ -122,20 +122,19 @@ public class RegisterDto {
         this.confirmPassword = confirmPassword;
     }
 
-   
 
 
     /**
-     * @return String return the image
+     * @return byte[] return the image
      */
-    public String getImage() {
+    public byte[] getImage() {
         return image;
     }
 
     /**
      * @param image the image to set
      */
-    public void setImage(String image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 
