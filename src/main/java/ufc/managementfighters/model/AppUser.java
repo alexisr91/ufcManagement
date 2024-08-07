@@ -159,21 +159,16 @@ public class AppUser {
         this.createdAt = createdAt;
     }
 
-    
-
-
-    /**
-     * @return byte[] return the image
-     */
-    public byte[] getImage() {
-        return image;
-    }
 
     /**
      * @param image the image to set
      */
     public void setImage(byte[] image) {
-        this.image = image;
+        this.image= image;
+    }
+
+    public byte[] getImageType() {
+        return image;
     }
 
 }

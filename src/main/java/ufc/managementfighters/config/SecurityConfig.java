@@ -28,7 +28,7 @@ public class SecurityConfig {
                             .requestMatchers("/").permitAll()
                             .requestMatchers("/contact").permitAll() 
                             .requestMatchers("/store/**").permitAll()
-                            .requestMatchers("/register").permitAll() 
+                            .requestMatchers("/register", "/images/**").permitAll() 
                             .requestMatchers("/login").permitAll() 
                             .requestMatchers("/profile/**").permitAll()
                             .requestMatchers("/logout").permitAll()

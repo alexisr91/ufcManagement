@@ -2,6 +2,10 @@ package ufc.managementfighters.controllers;
 
 import java.util.Date;
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +16,7 @@ import ufc.managementfighters.model.RegisterDto;
 import ufc.managementfighters.repository.AppUserRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -125,5 +130,22 @@ public class AccountController {
 
             }
             return "register";
+        }
+
+    @GetMapping("/images/{id}")
+        public ResponseEntity<byte[]> getImage(@PathVariable int id){
+
+            AppUser user = repo.findById(id).orElse(null);
+
+            if (user != null && user.getImageType() != null){
+
+                byte[] image = user.getImageType();
+                HttpHeaders headers = new HttpHeaders();
+                headers.setContentType(MediaType.IMAGE_JPEG); // ou autre type MIME selon le format de l'image
+                return new ResponseEntity<>(image, headers, HttpStatus.OK);
+            }else{
+
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
         }
 }

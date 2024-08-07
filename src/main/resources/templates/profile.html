@@ -11,7 +11,7 @@
     <h1 th:if="${user != null}">Profil de <span th:text="${user.lastName}"></span></h1>
     <h1 th:if="${user != null}">Profil de <span th:text="${user.email}"></span></h1>
     <div th:if="${user != null}">
-        <img th:src="${user.image}" alt="Image de profil" width="400px"/>
+        <img th:src="@{'/images/' + ${user.id}}" alt="Image de profil" width="400px"/>
     </div>
     <h1 th:if="${user == null}">Profil de <span th:text="${error}">User not found !!!</span></h1>
 </body>
