@@ -20,15 +20,15 @@
 
         <!-- Bloc de droite (70% de la largeur) -->
         <div class="w-2/3 flex justify-center items-center bg-white border rounded p-4">
-            <div class="w-full max-w-4xl">
-                <div class="flex justify-center items-center mb-4">
+            <div class="flex flex-col items-center justify-start w-full h-full">
+                <div class="flex justify-center items-start mb-4 w-full">
                     <a href="/" class="inline-block">
                         <img src="image/logo.png" alt="ufc-logo" class="w-28 h-auto max-w-full">
                     </a>
                 </div>
 
                 <div th:if="${user != null}" class="flex justify-center mt-4">
-                    <img th:src="@{'/images/' + ${user.id}}" alt="Image de profil" class="w-full max-w-sm h-auto">
+                    <img th:src="@{'/images/' + ${user.id}}" alt="Image de profil" class="max-w-full h-auto">
                 </div>
 
                 <h1 th:if="${user != null}" class="text-center mb-2">
