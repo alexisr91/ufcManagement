@@ -1,5 +1,6 @@
 package ufc.managementfighters.model;
 
+import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
 
 /*
@@ -23,6 +24,7 @@ public class RegisterDto {
     private String phone;
 
     @NotEmpty(message = "This field cannot be empty")
+    @Lob
     private byte[] image;
 
 
