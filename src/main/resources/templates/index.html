@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org" th:href="@{index.css}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFC Management</title>
 </head>
-<body>
+<body class="scroll-behavior: smooth">
     <div class="container py-5" style="max-width: 2400px">
+
         <nav class="bg-white border-gray-200">
             <div class="container mx-auto flex justify-between items-center px-4 py-3" style="max-width: 2400px">
                 <!-- Left Links -->
@@ -53,11 +55,16 @@
 
                 <!-- Register / Login Links -->
                 <div class="flex space-x-4" sec:authorize="!isAuthenticated()">
-                    <a href="/register" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-300"><sec:csrfInput />Register</a>
+                    <a href="/register" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-300"><sec:csrfInput />Register
                     <a href="/login" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-300">Login</a>
                 </div>
             </div>
         </nav>
+
+        <!-- Image cover -->
+        <div class="h-1/2 p-3">
+            <img id="fade-image" src="image/noche.jpg" alt="ufc-noche" class="opacity-0 grayscale">
+        </div>
     </div>
 </body>
 </html>

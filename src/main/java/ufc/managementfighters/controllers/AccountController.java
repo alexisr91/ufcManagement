@@ -127,7 +127,7 @@ public class AccountController {
             return "register";
         }
 
-    @GetMapping("/images/{id}")
+    @GetMapping(value = "/images/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
         public ResponseEntity<byte[]> getImage(@PathVariable int id){
 
             AppUser user = repo.findById(id).orElse(null);

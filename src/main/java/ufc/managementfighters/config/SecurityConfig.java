@@ -32,9 +32,10 @@ public class SecurityConfig {
                             .requestMatchers("/login").permitAll() 
                             .requestMatchers("/profile/**").permitAll()
                             .requestMatchers("/logout").permitAll()
-                            .requestMatchers("/image/**").permitAll()
+                            .requestMatchers("/css/**","/js/**", "/image/**").permitAll()
                             .anyRequest().authenticated()
                 )
+                
 
                 .formLogin(form -> form
 
