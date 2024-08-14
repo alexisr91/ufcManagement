@@ -61,10 +61,17 @@
             </div>
         </nav>
 
-        <!-- Image cover -->
-        <div class="h-1/2 p-3">
+        <!-- Image cover homepage -->
+        <div class="h-1/2 p-3" sec:authorize="!isAuthenticated()">
             <img id="fade-image" src="image/noche.jpg" alt="ufc-noche" class="opacity-0 grayscale">
         </div>
+
+        <!-- Image cover authenticated-->
+        <div class="h-1/2 p-3" sec:authorize="isAuthenticated()">
+            <img id="fade-image" src="image/image-process.jpg" alt="ufc-noche" class="opacity-0 grayscale" width="1900px">
+        </div>
+
+
     </div>
 </body>
 </html>
