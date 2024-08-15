@@ -1,7 +1,7 @@
 package ufc.managementfighters.controllers;
 
+import java.io.File;
 import java.util.Date;
-
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,7 +19,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotEmpty;
+
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 
 
@@ -128,19 +131,26 @@ public class AccountController {
         }
 
     @GetMapping(value = "/images/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
-        public ResponseEntity<byte[]> getImage(@PathVariable int id){
+        public ResponseEntity<MultipartFile[]> getImage(@PathVariable int id){
 
             AppUser user = repo.findById(id).orElse(null);
 
-            if (user != null && user.getImageType() != null){
+            if (user != null && user.getImage() != null){
 
-                byte[] image = user.getImageType();
+                MultipartFile[] image = user.getImage();
+                File imageFile = toFile(image, "image_" + id + ".jpg");
+                System.out.println("Image sauvegardée sur le disque : " + imageFile.getAbsolutePath());
+        
                 HttpHeaders headers = new HttpHeaders();
                 headers.setContentType(MediaType.IMAGE_JPEG); // ou autre type MIME selon le format de l'image
-                return new ResponseEntity<>(image, headers, HttpStatus.OK);
-            }else{
-
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return new ResponseEntity<MultipartFile[]>(image, headers, HttpStatus.OK);
+            } else {
+                return new ResponseEntity<MultipartFile[]>(HttpStatus.NOT_FOUND);
             }
         }
+
+
+    private File toFile(MultipartFile[] image, String string) {
+        return null;
+    }
 }

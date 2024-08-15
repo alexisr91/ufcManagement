@@ -1,5 +1,7 @@
 package ufc.managementfighters.model;
 
+
+
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
 
@@ -25,7 +27,7 @@ public class RegisterDto {
 
     @NotEmpty(message = "This field cannot be empty")
     @Lob
-    private byte[] image;
+    private byte [] image;
 
 
     @Size(min = 8,message = "Minimum password length is 6 characters")
@@ -117,15 +119,7 @@ public class RegisterDto {
         return confirmPassword;
     }
 
-    /**
-     * @param confirmPassword the confirmPassword to set
-     */
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
-
-
-
+    
     /**
      * @return byte[] return the image
      */
@@ -139,5 +133,7 @@ public class RegisterDto {
     public void setImage(byte[] image) {
         this.image = image;
     }
+
+  
 
 }
