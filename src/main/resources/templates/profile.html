@@ -31,9 +31,10 @@
 
                 <div th:if="${user != null}" class="flex justify-center mt-4">
                     <img th:src="@{'/images/' + ${user.id}}" alt="Image de profil" class="w-full max-w-sm h-auto">
+                    <!-- <img th:src="@{'/images/jpeg;page64' + ${user.id}}" alt="Image de profil" class="w-full max-w-sm h-auto"> -->
                 </div>
 
-                <div th:text="'URL: ' + '/images/' + ${user.id}"></div>
+                <div th:text="'URL: ' + '/images/' + ${user.image}"></div>
 
                 <h1 th:if="${user != null}" class="text-center mb-2">
                     Profil de <span th:text="${user.firstName} + ' ' + ${user.lastName}"></span>
