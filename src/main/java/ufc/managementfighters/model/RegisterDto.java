@@ -27,7 +27,7 @@ public class RegisterDto {
 
     @NotEmpty(message = "This field cannot be empty")
     @Lob
-    private byte [] image;
+    private byte[]image;
 
 
     @Size(min = 8,message = "Minimum password length is 6 characters")
