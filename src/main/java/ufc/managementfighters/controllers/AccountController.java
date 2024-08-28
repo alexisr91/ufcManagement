@@ -1,9 +1,10 @@
 package ufc.managementfighters.controllers;
 
+import java.io.Console;
 import java.io.File;
 import java.util.Date;
 
-import org.junit.Test;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -79,6 +80,7 @@ public class AccountController {
         @Valid @ModelAttribute RegisterDto registerDto,
         BindingResult result
         ){
+            System.out.println("mon resultat est :" + result);
             // Handling authentification errors if its equals to the Password field and Confirm password are different 
             if(!registerDto.getPassword().equals(registerDto.getConfirmPassword())){
                 result.addError(
@@ -93,6 +95,12 @@ public class AccountController {
                     new FieldError("registerDto","email"
                     ,"Email adress is already used")
                 );
+            }
+
+            if (result.hasErrors()) {
+                result.getAllErrors().forEach(error -> {
+                    System.out.println("Erreur : " + error.getObjectName() + " - " + error.getDefaultMessage());
+                });
             }
 
             if(result.hasErrors()){

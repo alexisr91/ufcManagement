@@ -1,278 +1,740 @@
-2024-08-27T20:21:55.288+02:00  INFO 26627 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 26627 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T20:21:55.446+02:00  INFO 26627 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T20:21:58.809+02:00  INFO 26627 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:21:58.815+02:00  INFO 26627 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T20:21:59.300+02:00  INFO 26627 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 385 ms. Found 1 JPA repository interface.
-2024-08-27T20:21:59.401+02:00  INFO 26627 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:21:59.405+02:00  INFO 26627 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T20:21:59.492+02:00  INFO 26627 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T20:21:59.494+02:00  INFO 26627 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
-2024-08-27T20:22:01.810+02:00  INFO 26627 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T20:22:01.909+02:00  INFO 26627 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T20:22:01.913+02:00  INFO 26627 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T20:22:02.506+02:00  INFO 26627 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T20:22:02.509+02:00  INFO 26627 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6728 ms
-2024-08-27T20:22:03.304+02:00  INFO 26627 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T20:22:03.519+02:00  INFO 26627 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T20:22:03.701+02:00  INFO 26627 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T20:22:05.220+02:00  INFO 26627 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T20:22:05.449+02:00  INFO 26627 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T20:22:06.713+02:00  INFO 26627 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b2d58e6
-2024-08-27T20:22:06.726+02:00  INFO 26627 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T20:22:07.197+02:00  WARN 26627 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T20:22:10.312+02:00  INFO 26627 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T20:22:10.494+02:00  INFO 26627 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:22:11.829+02:00  WARN 26627 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T20:22:11.990+02:00  INFO 26627 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T20:22:12.455+02:00  INFO 26627 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T20:22:15.435+02:00  INFO 26627 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T20:22:15.493+02:00  INFO 26627 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 21.952 seconds (process running for 23.901)
-2024-08-27T20:41:53.774+02:00  INFO 29227 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 29227 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T20:41:53.837+02:00  INFO 29227 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T20:41:55.555+02:00  INFO 29227 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:41:55.559+02:00  INFO 29227 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T20:41:55.942+02:00  INFO 29227 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 357 ms. Found 1 JPA repository interface.
-2024-08-27T20:41:56.159+02:00  INFO 29227 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:41:56.162+02:00  INFO 29227 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T20:41:56.242+02:00  INFO 29227 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T20:41:56.246+02:00  INFO 29227 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2024-08-27T20:41:57.488+02:00  INFO 29227 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T20:41:57.524+02:00  INFO 29227 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T20:41:57.525+02:00  INFO 29227 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T20:41:57.778+02:00  INFO 29227 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T20:41:57.794+02:00  INFO 29227 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3736 ms
-2024-08-27T20:41:58.451+02:00  INFO 29227 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T20:41:58.747+02:00  INFO 29227 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T20:41:58.877+02:00  INFO 29227 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T20:41:59.720+02:00  INFO 29227 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T20:41:59.849+02:00  INFO 29227 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T20:42:00.930+02:00  INFO 29227 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72ec16f8
-2024-08-27T20:42:00.935+02:00  INFO 29227 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T20:42:01.162+02:00  WARN 29227 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T20:42:04.593+02:00  INFO 29227 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T20:42:04.762+02:00  INFO 29227 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:42:05.813+02:00  WARN 29227 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T20:42:05.918+02:00  INFO 29227 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T20:42:06.135+02:00  INFO 29227 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T20:42:08.824+02:00  INFO 29227 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T20:42:08.946+02:00  INFO 29227 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 16.193 seconds (process running for 23.581)
-2024-08-27T20:42:27.447+02:00  INFO 29227 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T20:42:27.449+02:00  INFO 29227 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T20:42:27.454+02:00  INFO 29227 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-08-27T20:42:48.262+02:00  WARN 29227 --- [managementfighters] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-08-27T20:42:48.530+02:00  WARN 29227 --- [managementfighters] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-08-27T20:44:12.460+02:00  WARN 29227 --- [managementfighters] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-08-27T20:44:13.001+02:00  WARN 29227 --- [managementfighters] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
-2024-08-27T20:46:47.120+02:00  INFO 29227 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:46:47.142+02:00  INFO 29227 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T20:46:47.188+02:00  INFO 29227 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T20:46:58.528+02:00  INFO 30093 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 30093 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T20:46:58.534+02:00  INFO 30093 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T20:47:00.446+02:00  INFO 30093 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:47:00.451+02:00  INFO 30093 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T20:47:00.811+02:00  INFO 30093 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 286 ms. Found 1 JPA repository interface.
-2024-08-27T20:47:00.921+02:00  INFO 30093 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:47:00.960+02:00  INFO 30093 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T20:47:01.044+02:00  INFO 30093 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T20:47:01.046+02:00  INFO 30093 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2024-08-27T20:47:02.359+02:00  INFO 30093 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T20:47:02.384+02:00  INFO 30093 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T20:47:02.388+02:00  INFO 30093 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T20:47:02.681+02:00  INFO 30093 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T20:47:02.683+02:00  INFO 30093 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3848 ms
-2024-08-27T20:47:03.267+02:00  INFO 30093 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T20:47:03.414+02:00  INFO 30093 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T20:47:03.505+02:00  INFO 30093 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T20:47:04.018+02:00  INFO 30093 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T20:47:04.094+02:00  INFO 30093 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T20:47:04.760+02:00  INFO 30093 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad3969
-2024-08-27T20:47:04.767+02:00  INFO 30093 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T20:47:04.932+02:00  WARN 30093 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T20:47:06.495+02:00  INFO 30093 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T20:47:06.610+02:00  INFO 30093 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:47:07.285+02:00  WARN 30093 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T20:47:07.412+02:00  INFO 30093 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T20:47:07.580+02:00  INFO 30093 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T20:47:10.010+02:00  INFO 30093 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T20:47:10.067+02:00  INFO 30093 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.589 seconds (process running for 18.827)
-2024-08-27T20:47:33.030+02:00  INFO 30093 --- [managementfighters] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T20:47:33.031+02:00  INFO 30093 --- [managementfighters] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T20:47:33.035+02:00  INFO 30093 --- [managementfighters] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-08-27T20:55:43.561+02:00  INFO 30093 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:55:43.650+02:00  INFO 30093 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T20:55:43.739+02:00  INFO 30093 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T20:55:55.760+02:00  INFO 31357 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 31357 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T20:55:55.768+02:00  INFO 31357 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T20:55:57.243+02:00  INFO 31357 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:55:57.246+02:00  INFO 31357 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T20:55:57.576+02:00  INFO 31357 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 308 ms. Found 1 JPA repository interface.
-2024-08-27T20:55:57.658+02:00  INFO 31357 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T20:55:57.662+02:00  INFO 31357 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T20:55:57.741+02:00  INFO 31357 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T20:55:57.742+02:00  INFO 31357 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-2024-08-27T20:55:58.885+02:00  INFO 31357 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T20:55:58.936+02:00  INFO 31357 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T20:55:58.939+02:00  INFO 31357 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T20:55:59.099+02:00  INFO 31357 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T20:55:59.101+02:00  INFO 31357 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3188 ms
-2024-08-27T20:55:59.391+02:00  INFO 31357 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T20:55:59.505+02:00  INFO 31357 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T20:55:59.596+02:00  INFO 31357 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T20:56:00.108+02:00  INFO 31357 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T20:56:00.205+02:00  INFO 31357 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T20:56:00.748+02:00  INFO 31357 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@614d7fbf
-2024-08-27T20:56:00.753+02:00  INFO 31357 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T20:56:00.925+02:00  WARN 31357 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T20:56:02.320+02:00  INFO 31357 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T20:56:02.413+02:00  INFO 31357 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:56:03.026+02:00  WARN 31357 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T20:56:03.106+02:00  INFO 31357 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T20:56:03.290+02:00  INFO 31357 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T20:56:04.822+02:00  INFO 31357 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T20:56:04.873+02:00  INFO 31357 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 9.78 seconds (process running for 16.028)
-2024-08-27T20:56:18.533+02:00  INFO 31357 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T20:56:18.534+02:00  INFO 31357 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T20:56:18.538+02:00  INFO 31357 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-08-27T20:59:47.642+02:00  INFO 31357 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T20:59:47.649+02:00  INFO 31357 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T20:59:47.664+02:00  INFO 31357 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T21:04:29.495+02:00  INFO 32084 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 32084 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T21:04:29.501+02:00  INFO 32084 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T21:04:31.120+02:00  INFO 32084 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T21:04:31.124+02:00  INFO 32084 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T21:04:31.467+02:00  INFO 32084 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 283 ms. Found 1 JPA repository interface.
-2024-08-27T21:04:31.640+02:00  INFO 32084 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T21:04:31.643+02:00  INFO 32084 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T21:04:31.674+02:00  INFO 32084 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T21:04:31.675+02:00  INFO 32084 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-2024-08-27T21:04:32.836+02:00  INFO 32084 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T21:04:32.863+02:00  INFO 32084 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T21:04:32.864+02:00  INFO 32084 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T21:04:33.034+02:00  INFO 32084 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T21:04:33.035+02:00  INFO 32084 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3317 ms
-2024-08-27T21:04:33.336+02:00  INFO 32084 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T21:04:33.501+02:00  INFO 32084 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T21:04:33.629+02:00  INFO 32084 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T21:04:34.194+02:00  INFO 32084 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T21:04:34.257+02:00  INFO 32084 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T21:04:35.216+02:00  INFO 32084 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b88af70
-2024-08-27T21:04:35.222+02:00  INFO 32084 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T21:04:35.429+02:00  WARN 32084 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T21:04:36.919+02:00  INFO 32084 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T21:04:36.996+02:00  INFO 32084 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T21:04:37.815+02:00  WARN 32084 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T21:04:37.924+02:00  INFO 32084 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T21:04:38.099+02:00  INFO 32084 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T21:04:39.951+02:00  INFO 32084 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T21:04:39.987+02:00  INFO 32084 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 11.748 seconds (process running for 12.585)
-2024-08-27T21:04:47.474+02:00  INFO 32084 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T21:04:47.475+02:00  INFO 32084 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T21:04:47.501+02:00  INFO 32084 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
-2024-08-27T21:41:21.027+02:00  INFO 32084 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T21:41:21.042+02:00  INFO 32084 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T21:41:21.053+02:00  INFO 32084 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T21:41:36.273+02:00  INFO 36840 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 36840 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T21:41:36.331+02:00  INFO 36840 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T21:41:39.127+02:00  INFO 36840 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T21:41:39.131+02:00  INFO 36840 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T21:41:39.540+02:00  INFO 36840 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 390 ms. Found 1 JPA repository interface.
-2024-08-27T21:41:39.654+02:00  INFO 36840 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T21:41:39.668+02:00  INFO 36840 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T21:41:39.809+02:00  INFO 36840 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T21:41:39.811+02:00  INFO 36840 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 0 Redis repository interfaces.
-2024-08-27T21:41:41.078+02:00  INFO 36840 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T21:41:41.127+02:00  INFO 36840 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T21:41:41.128+02:00  INFO 36840 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T21:41:41.251+02:00  INFO 36840 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T21:41:41.252+02:00  INFO 36840 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4583 ms
-2024-08-27T21:41:41.549+02:00  INFO 36840 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T21:41:41.672+02:00  INFO 36840 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T21:41:41.756+02:00  INFO 36840 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T21:41:42.255+02:00  INFO 36840 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T21:41:42.338+02:00  INFO 36840 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T21:41:42.925+02:00  INFO 36840 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@762cdf46
-2024-08-27T21:41:42.928+02:00  INFO 36840 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T21:41:43.059+02:00  WARN 36840 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T21:41:44.920+02:00  INFO 36840 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T21:41:45.054+02:00  INFO 36840 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T21:41:45.706+02:00  WARN 36840 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T21:41:45.785+02:00  INFO 36840 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T21:41:45.983+02:00  INFO 36840 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T21:41:47.482+02:00  INFO 36840 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T21:41:47.551+02:00  INFO 36840 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.127 seconds (process running for 18.857)
-2024-08-27T21:41:57.693+02:00  INFO 36840 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T21:41:57.756+02:00  INFO 36840 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T21:41:57.827+02:00  INFO 36840 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2024-08-27T22:07:14.166+02:00  INFO 36840 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T22:07:14.172+02:00  INFO 36840 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T22:07:14.186+02:00  INFO 36840 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T22:08:09.415+02:00  INFO 40172 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 40172 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T22:08:09.429+02:00  INFO 40172 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T22:08:11.842+02:00  INFO 40172 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T22:08:11.861+02:00  INFO 40172 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T22:08:12.262+02:00  INFO 40172 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 315 ms. Found 1 JPA repository interface.
-2024-08-27T22:08:12.385+02:00  INFO 40172 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T22:08:12.391+02:00  INFO 40172 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T22:08:12.565+02:00  INFO 40172 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T22:08:12.568+02:00  INFO 40172 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 0 Redis repository interfaces.
-2024-08-27T22:08:13.930+02:00  INFO 40172 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T22:08:14.045+02:00  INFO 40172 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T22:08:14.051+02:00  INFO 40172 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T22:08:14.284+02:00  INFO 40172 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T22:08:14.286+02:00  INFO 40172 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4733 ms
-2024-08-27T22:08:14.810+02:00  INFO 40172 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T22:08:14.966+02:00  INFO 40172 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T22:08:15.060+02:00  INFO 40172 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T22:08:15.620+02:00  INFO 40172 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T22:08:15.707+02:00  INFO 40172 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T22:08:16.824+02:00  INFO 40172 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad3969
-2024-08-27T22:08:16.830+02:00  INFO 40172 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T22:08:17.068+02:00  WARN 40172 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T22:08:18.543+02:00  INFO 40172 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T22:08:18.648+02:00  INFO 40172 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T22:08:19.189+02:00  WARN 40172 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T22:08:19.264+02:00  INFO 40172 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T22:08:19.410+02:00  INFO 40172 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T22:08:20.851+02:00  INFO 40172 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T22:08:20.935+02:00  INFO 40172 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.289 seconds (process running for 18.314)
-2024-08-27T22:09:04.178+02:00  INFO 40172 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T22:09:04.180+02:00  INFO 40172 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T22:09:04.199+02:00  INFO 40172 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2024-08-27T22:15:25.278+02:00  INFO 40172 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T22:15:25.283+02:00  INFO 40172 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T22:15:25.299+02:00  INFO 40172 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-08-27T22:16:03.664+02:00  INFO 41162 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 41162 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
-2024-08-27T22:16:03.740+02:00  INFO 41162 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
-2024-08-27T22:16:05.273+02:00  INFO 41162 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T22:16:05.278+02:00  INFO 41162 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-27T22:16:05.769+02:00  INFO 41162 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 335 ms. Found 1 JPA repository interface.
-2024-08-27T22:16:05.853+02:00  INFO 41162 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-08-27T22:16:05.876+02:00  INFO 41162 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-08-27T22:16:05.968+02:00  INFO 41162 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-08-27T22:16:05.969+02:00  INFO 41162 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2024-08-27T22:16:07.229+02:00  INFO 41162 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-27T22:16:07.258+02:00  INFO 41162 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-27T22:16:07.259+02:00  INFO 41162 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-08-27T22:16:07.474+02:00  INFO 41162 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-27T22:16:07.476+02:00  INFO 41162 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3594 ms
-2024-08-27T22:16:07.903+02:00  INFO 41162 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-27T22:16:08.044+02:00  INFO 41162 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-27T22:16:08.131+02:00  INFO 41162 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-27T22:16:08.599+02:00  INFO 41162 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-27T22:16:08.678+02:00  INFO 41162 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-27T22:16:09.231+02:00  INFO 41162 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ad3969
-2024-08-27T22:16:09.235+02:00  INFO 41162 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-27T22:16:09.396+02:00  WARN 41162 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-08-27T22:16:10.835+02:00  INFO 41162 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-27T22:16:10.923+02:00  INFO 41162 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T22:16:11.722+02:00  WARN 41162 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-27T22:16:11.819+02:00  INFO 41162 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
-2024-08-27T22:16:11.995+02:00  INFO 41162 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-08-27T22:16:13.409+02:00  INFO 41162 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-27T22:16:13.433+02:00  INFO 41162 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 10.829 seconds (process running for 17.505)
-2024-08-27T22:16:18.477+02:00  INFO 41162 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-27T22:16:18.479+02:00  INFO 41162 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-27T22:16:18.483+02:00  INFO 41162 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-08-27T22:16:38.153+02:00  INFO 41162 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-08-27T22:16:38.158+02:00  INFO 41162 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-08-27T22:16:38.173+02:00  INFO 41162 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T00:22:41.355+02:00  INFO 41860 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 41860 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T00:22:41.413+02:00  INFO 41860 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T00:22:43.824+02:00  INFO 41860 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:22:43.829+02:00  INFO 41860 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T00:22:44.270+02:00  INFO 41860 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 407 ms. Found 1 JPA repository interface.
+2024-08-28T00:22:44.375+02:00  INFO 41860 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:22:44.379+02:00  INFO 41860 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T00:22:44.530+02:00  INFO 41860 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T00:22:44.532+02:00  INFO 41860 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-08-28T00:22:45.942+02:00  INFO 41860 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T00:22:46.007+02:00  INFO 41860 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T00:22:46.009+02:00  INFO 41860 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T00:22:46.152+02:00  INFO 41860 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T00:22:46.209+02:00  INFO 41860 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4636 ms
+2024-08-28T00:22:46.636+02:00  INFO 41860 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T00:22:46.939+02:00  INFO 41860 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T00:22:47.055+02:00  INFO 41860 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T00:22:47.762+02:00  INFO 41860 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T00:22:47.864+02:00  INFO 41860 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T00:22:48.585+02:00  INFO 41860 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d5a0b14
+2024-08-28T00:22:48.590+02:00  INFO 41860 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T00:22:48.788+02:00  WARN 41860 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T00:22:50.453+02:00  INFO 41860 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T00:22:50.563+02:00  INFO 41860 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:22:51.248+02:00  WARN 41860 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T00:22:51.354+02:00  INFO 41860 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T00:22:51.552+02:00  INFO 41860 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T00:22:53.429+02:00  INFO 41860 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T00:22:53.516+02:00  INFO 41860 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.897 seconds (process running for 19.013)
+2024-08-28T00:23:03.631+02:00  INFO 41860 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T00:23:03.632+02:00  INFO 41860 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T00:23:03.635+02:00  INFO 41860 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-28T00:36:11.362+02:00  INFO 41860 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:36:11.369+02:00  INFO 41860 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T00:36:11.423+02:00  INFO 41860 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T00:36:21.986+02:00  INFO 43657 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 43657 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T00:36:22.016+02:00  INFO 43657 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T00:36:23.806+02:00  INFO 43657 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:36:23.810+02:00  INFO 43657 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T00:36:24.153+02:00  INFO 43657 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 294 ms. Found 1 JPA repository interface.
+2024-08-28T00:36:24.254+02:00  INFO 43657 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:36:24.269+02:00  INFO 43657 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T00:36:24.323+02:00  INFO 43657 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T00:36:24.327+02:00  INFO 43657 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2024-08-28T00:36:25.334+02:00  INFO 43657 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T00:36:25.497+02:00  INFO 43657 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T00:36:25.498+02:00  INFO 43657 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T00:36:25.699+02:00  INFO 43657 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T00:36:25.700+02:00  INFO 43657 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3393 ms
+2024-08-28T00:36:25.992+02:00  INFO 43657 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T00:36:26.117+02:00  INFO 43657 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T00:36:26.205+02:00  INFO 43657 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T00:36:26.680+02:00  INFO 43657 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T00:36:26.755+02:00  INFO 43657 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T00:36:27.291+02:00  INFO 43657 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cff03cf
+2024-08-28T00:36:27.295+02:00  INFO 43657 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T00:36:27.471+02:00  WARN 43657 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T00:36:28.976+02:00  INFO 43657 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T00:36:29.085+02:00  INFO 43657 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:36:29.654+02:00  WARN 43657 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T00:36:29.711+02:00  INFO 43657 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T00:36:29.870+02:00  INFO 43657 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T00:36:31.307+02:00  INFO 43657 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T00:36:31.362+02:00  INFO 43657 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 10.167 seconds (process running for 16.332)
+2024-08-28T00:36:50.526+02:00  INFO 43657 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T00:36:50.526+02:00  INFO 43657 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T00:36:50.529+02:00  INFO 43657 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-28T00:40:19.745+02:00  INFO 43657 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:40:19.751+02:00  INFO 43657 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T00:40:19.772+02:00  INFO 43657 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T00:40:32.157+02:00  INFO 43841 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 43841 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T00:40:32.163+02:00  INFO 43841 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T00:40:33.791+02:00  INFO 43841 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:40:33.796+02:00  INFO 43841 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T00:40:34.154+02:00  INFO 43841 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 313 ms. Found 1 JPA repository interface.
+2024-08-28T00:40:34.248+02:00  INFO 43841 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:40:34.259+02:00  INFO 43841 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T00:40:34.321+02:00  INFO 43841 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T00:40:34.321+02:00  INFO 43841 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2024-08-28T00:40:35.598+02:00  INFO 43841 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T00:40:35.622+02:00  INFO 43841 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T00:40:35.622+02:00  INFO 43841 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T00:40:35.800+02:00  INFO 43841 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T00:40:35.801+02:00  INFO 43841 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3483 ms
+2024-08-28T00:40:36.097+02:00  INFO 43841 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T00:40:36.213+02:00  INFO 43841 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T00:40:36.307+02:00  INFO 43841 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T00:40:36.781+02:00  INFO 43841 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T00:40:36.873+02:00  INFO 43841 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T00:40:37.419+02:00  INFO 43841 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@614d7fbf
+2024-08-28T00:40:37.461+02:00  INFO 43841 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T00:40:37.615+02:00  WARN 43841 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T00:40:39.142+02:00  INFO 43841 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T00:40:39.248+02:00  INFO 43841 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:40:39.826+02:00  WARN 43841 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T00:40:39.914+02:00  INFO 43841 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T00:40:40.069+02:00  INFO 43841 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T00:40:41.546+02:00  INFO 43841 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T00:40:41.607+02:00  INFO 43841 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 10.442 seconds (process running for 16.629)
+2024-08-28T00:41:00.300+02:00  INFO 43841 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T00:41:00.301+02:00  INFO 43841 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T00:41:00.308+02:00  INFO 43841 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-28T00:44:16.759+02:00  INFO 43841 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:44:16.773+02:00  INFO 43841 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T00:44:16.806+02:00  INFO 43841 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T00:44:22.481+02:00  INFO 44416 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 44416 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T00:44:22.509+02:00  INFO 44416 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T00:44:26.901+02:00  INFO 44416 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:44:26.908+02:00  INFO 44416 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T00:44:27.540+02:00  INFO 44416 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 602 ms. Found 1 JPA repository interface.
+2024-08-28T00:44:27.693+02:00  INFO 44416 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T00:44:27.709+02:00  INFO 44416 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T00:44:28.019+02:00  INFO 44416 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T00:44:28.021+02:00  INFO 44416 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 0 Redis repository interfaces.
+2024-08-28T00:44:30.956+02:00  INFO 44416 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T00:44:31.077+02:00  INFO 44416 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T00:44:31.081+02:00  INFO 44416 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T00:44:31.463+02:00  INFO 44416 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T00:44:31.466+02:00  INFO 44416 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8328 ms
+2024-08-28T00:44:32.184+02:00  INFO 44416 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T00:44:32.424+02:00  INFO 44416 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T00:44:32.614+02:00  INFO 44416 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T00:44:33.656+02:00  INFO 44416 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T00:44:33.854+02:00  INFO 44416 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T00:44:35.276+02:00  INFO 44416 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79445efb
+2024-08-28T00:44:35.285+02:00  INFO 44416 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T00:44:35.611+02:00  WARN 44416 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T00:44:39.902+02:00  INFO 44416 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T00:44:40.153+02:00  INFO 44416 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T00:44:41.497+02:00  WARN 44416 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T00:44:41.684+02:00  INFO 44416 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T00:44:42.023+02:00  INFO 44416 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T00:44:45.332+02:00  INFO 44416 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T00:44:45.391+02:00  INFO 44416 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 25.073 seconds (process running for 27.12)
+2024-08-28T00:48:03.626+02:00  INFO 44416 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T00:48:03.629+02:00  INFO 44416 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T00:48:03.910+02:00  INFO 44416 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 276 ms
+2024-08-28T00:48:04.590+02:00  WARN 44416 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [158] milliseconds.
+2024-08-28T11:24:49.020+02:00  WARN 44416 --- [managementfighters] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h34m42s187ms).
+2024-08-28T11:26:23.087+02:00  INFO 44416 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:26:23.108+02:00  INFO 44416 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T11:26:23.147+02:00  INFO 44416 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T11:26:27.620+02:00  INFO 45578 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 45578 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T11:26:27.632+02:00  INFO 45578 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T11:26:30.575+02:00  INFO 45578 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:26:30.610+02:00  INFO 45578 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T11:26:31.919+02:00  INFO 45578 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1168 ms. Found 1 JPA repository interface.
+2024-08-28T11:26:32.116+02:00  INFO 45578 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:26:32.163+02:00  INFO 45578 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T11:26:32.359+02:00  INFO 45578 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T11:26:32.387+02:00  INFO 45578 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 0 Redis repository interfaces.
+2024-08-28T11:26:37.565+02:00  INFO 45578 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T11:26:37.678+02:00  INFO 45578 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T11:26:37.684+02:00  INFO 45578 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T11:26:38.021+02:00  INFO 45578 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T11:26:38.023+02:00  INFO 45578 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10056 ms
+2024-08-28T11:26:38.838+02:00  INFO 45578 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T11:26:39.282+02:00  INFO 45578 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T11:26:39.409+02:00  INFO 45578 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T11:26:40.626+02:00  INFO 45578 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T11:26:40.753+02:00  INFO 45578 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T11:26:41.646+02:00  INFO 45578 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e2772a9
+2024-08-28T11:26:41.720+02:00  INFO 45578 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T11:26:41.951+02:00  WARN 45578 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T11:26:44.343+02:00  INFO 45578 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T11:26:44.449+02:00  INFO 45578 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:26:46.154+02:00  WARN 45578 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T11:26:46.271+02:00  INFO 45578 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T11:26:46.546+02:00  INFO 45578 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T11:26:49.139+02:00  INFO 45578 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T11:26:49.224+02:00  INFO 45578 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 23.092 seconds (process running for 25.277)
+2024-08-28T11:28:21.209+02:00  INFO 45578 --- [managementfighters] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T11:28:21.210+02:00  INFO 45578 --- [managementfighters] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T11:28:21.215+02:00  INFO 45578 --- [managementfighters] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-28T11:28:30.499+02:00  INFO 45578 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:28:30.508+02:00  INFO 45578 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T11:28:30.532+02:00  INFO 45578 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T11:28:40.800+02:00  INFO 46097 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 46097 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T11:28:40.806+02:00  INFO 46097 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T11:28:42.564+02:00  INFO 46097 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:28:42.568+02:00  INFO 46097 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T11:28:43.018+02:00  INFO 46097 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 351 ms. Found 1 JPA repository interface.
+2024-08-28T11:28:43.105+02:00  INFO 46097 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:28:43.108+02:00  INFO 46097 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T11:28:43.236+02:00  INFO 46097 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T11:28:43.237+02:00  INFO 46097 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2024-08-28T11:28:44.437+02:00  INFO 46097 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T11:28:44.492+02:00  INFO 46097 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T11:28:44.494+02:00  INFO 46097 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T11:28:44.642+02:00  INFO 46097 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T11:28:44.644+02:00  INFO 46097 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3608 ms
+2024-08-28T11:28:44.949+02:00  INFO 46097 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T11:28:45.068+02:00  INFO 46097 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T11:28:45.160+02:00  INFO 46097 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T11:28:45.692+02:00  INFO 46097 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T11:28:45.773+02:00  INFO 46097 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T11:28:46.325+02:00  INFO 46097 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@af3295f
+2024-08-28T11:28:46.329+02:00  INFO 46097 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T11:28:46.466+02:00  WARN 46097 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T11:28:48.005+02:00  INFO 46097 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T11:28:48.138+02:00  INFO 46097 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:28:49.152+02:00  WARN 46097 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T11:28:49.260+02:00  INFO 46097 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T11:28:49.510+02:00  INFO 46097 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T11:28:51.042+02:00  INFO 46097 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T11:28:51.112+02:00  INFO 46097 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 11.097 seconds (process running for 17.583)
+2024-08-28T11:29:02.018+02:00  INFO 46097 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T11:29:02.021+02:00  INFO 46097 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T11:29:02.024+02:00  INFO 46097 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-28T11:36:01.964+02:00  INFO 46097 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:36:01.972+02:00  INFO 46097 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T11:36:01.997+02:00  INFO 46097 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T11:36:05.000+02:00  INFO 47168 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 47168 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T11:36:05.039+02:00  INFO 47168 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T11:36:07.185+02:00  INFO 47168 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:36:07.189+02:00  INFO 47168 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T11:36:07.866+02:00  INFO 47168 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 597 ms. Found 1 JPA repository interface.
+2024-08-28T11:36:07.951+02:00  INFO 47168 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:36:07.953+02:00  INFO 47168 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T11:36:08.068+02:00  INFO 47168 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T11:36:08.070+02:00  INFO 47168 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2024-08-28T11:36:09.619+02:00  INFO 47168 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T11:36:09.681+02:00  INFO 47168 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T11:36:09.682+02:00  INFO 47168 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T11:36:10.093+02:00  INFO 47168 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T11:36:10.144+02:00  INFO 47168 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4877 ms
+2024-08-28T11:36:10.627+02:00  INFO 47168 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T11:36:10.786+02:00  INFO 47168 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T11:36:10.894+02:00  INFO 47168 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T11:36:11.467+02:00  INFO 47168 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T11:36:11.559+02:00  INFO 47168 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T11:36:12.289+02:00  INFO 47168 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3573e19d
+2024-08-28T11:36:12.355+02:00  INFO 47168 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T11:36:12.675+02:00  WARN 47168 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T11:36:14.686+02:00  INFO 47168 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T11:36:14.801+02:00  INFO 47168 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:36:15.574+02:00  WARN 47168 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T11:36:15.667+02:00  INFO 47168 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T11:36:15.835+02:00  INFO 47168 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T11:36:17.240+02:00  INFO 47168 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T11:36:17.298+02:00  INFO 47168 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 13.859 seconds (process running for 14.699)
+2024-08-28T11:36:38.709+02:00  INFO 47168 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T11:36:38.711+02:00  INFO 47168 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T11:36:38.716+02:00  INFO 47168 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-28T11:46:35.329+02:00  INFO 47168 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:46:35.351+02:00  INFO 47168 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T11:46:35.396+02:00  INFO 47168 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T11:46:38.085+02:00  INFO 49643 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 49643 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T11:46:38.109+02:00  INFO 49643 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T11:46:39.672+02:00  INFO 49643 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:46:39.677+02:00  INFO 49643 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T11:46:40.133+02:00  INFO 49643 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 435 ms. Found 1 JPA repository interface.
+2024-08-28T11:46:40.213+02:00  INFO 49643 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:46:40.216+02:00  INFO 49643 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T11:46:40.321+02:00  INFO 49643 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T11:46:40.365+02:00  INFO 49643 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 0 Redis repository interfaces.
+2024-08-28T11:46:41.595+02:00  INFO 49643 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T11:46:41.656+02:00  INFO 49643 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T11:46:41.680+02:00  INFO 49643 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T11:46:41.893+02:00  INFO 49643 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T11:46:41.895+02:00  INFO 49643 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3622 ms
+2024-08-28T11:46:42.396+02:00  INFO 49643 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T11:46:42.530+02:00  INFO 49643 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T11:46:42.632+02:00  INFO 49643 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T11:46:43.109+02:00  INFO 49643 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T11:46:43.188+02:00  INFO 49643 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T11:46:43.796+02:00  INFO 49643 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4449b273
+2024-08-28T11:46:43.802+02:00  INFO 49643 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T11:46:43.973+02:00  WARN 49643 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T11:46:45.574+02:00  INFO 49643 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T11:46:45.682+02:00  INFO 49643 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:46:46.420+02:00  WARN 49643 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T11:46:46.499+02:00  INFO 49643 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T11:46:46.661+02:00  INFO 49643 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T11:46:48.162+02:00  INFO 49643 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T11:46:48.188+02:00  INFO 49643 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 11.308 seconds (process running for 12.488)
+2024-08-28T11:48:15.745+02:00  INFO 49643 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T11:48:15.746+02:00  INFO 49643 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T11:48:15.750+02:00  INFO 49643 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-28T11:56:02.026+02:00  INFO 49643 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:56:02.050+02:00  INFO 49643 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T11:56:02.135+02:00  INFO 49643 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T11:56:04.412+02:00  INFO 52607 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 52607 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T11:56:04.421+02:00  INFO 52607 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T11:56:06.567+02:00  INFO 52607 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:56:06.571+02:00  INFO 52607 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T11:56:06.927+02:00  INFO 52607 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 319 ms. Found 1 JPA repository interface.
+2024-08-28T11:56:07.090+02:00  INFO 52607 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:56:07.093+02:00  INFO 52607 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T11:56:07.129+02:00  INFO 52607 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T11:56:07.129+02:00  INFO 52607 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-08-28T11:56:08.416+02:00  INFO 52607 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T11:56:08.448+02:00  INFO 52607 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T11:56:08.449+02:00  INFO 52607 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T11:56:08.657+02:00  INFO 52607 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T11:56:08.659+02:00  INFO 52607 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4040 ms
+2024-08-28T11:56:08.992+02:00  INFO 52607 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T11:56:09.121+02:00  INFO 52607 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T11:56:09.226+02:00  INFO 52607 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T11:56:09.744+02:00  INFO 52607 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T11:56:09.863+02:00  INFO 52607 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T11:56:11.176+02:00  INFO 52607 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79445efb
+2024-08-28T11:56:11.181+02:00  INFO 52607 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T11:56:11.354+02:00  WARN 52607 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T11:56:13.107+02:00  INFO 52607 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T11:56:13.289+02:00  INFO 52607 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:56:14.494+02:00  WARN 52607 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T11:56:14.662+02:00  INFO 52607 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T11:56:15.383+02:00  INFO 52607 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T11:56:19.113+02:00  INFO 52607 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T11:56:19.138+02:00  INFO 52607 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 15.575 seconds (process running for 16.359)
+2024-08-28T11:56:19.175+02:00  INFO 52607 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:56:19.179+02:00  INFO 52607 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T11:56:19.192+02:00  INFO 52607 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T11:56:21.237+02:00  INFO 52719 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 52719 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T11:56:21.244+02:00  INFO 52719 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T11:56:22.884+02:00  INFO 52719 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:56:22.889+02:00  INFO 52719 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T11:56:23.287+02:00  INFO 52719 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 289 ms. Found 1 JPA repository interface.
+2024-08-28T11:56:23.373+02:00  INFO 52719 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T11:56:23.376+02:00  INFO 52719 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T11:56:23.446+02:00  INFO 52719 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T11:56:23.450+02:00  INFO 52719 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2024-08-28T11:56:24.648+02:00  INFO 52719 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T11:56:24.722+02:00  INFO 52719 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T11:56:24.727+02:00  INFO 52719 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T11:56:24.874+02:00  INFO 52719 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T11:56:24.875+02:00  INFO 52719 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3493 ms
+2024-08-28T11:56:25.351+02:00  INFO 52719 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T11:56:25.483+02:00  INFO 52719 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T11:56:25.587+02:00  INFO 52719 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T11:56:26.098+02:00  INFO 52719 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T11:56:26.201+02:00  INFO 52719 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T11:56:26.785+02:00  INFO 52719 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e2772a9
+2024-08-28T11:56:26.790+02:00  INFO 52719 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T11:56:26.971+02:00  WARN 52719 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T11:56:28.410+02:00  INFO 52719 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T11:56:28.511+02:00  INFO 52719 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T11:56:29.178+02:00  WARN 52719 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T11:56:29.267+02:00  INFO 52719 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T11:56:29.461+02:00  INFO 52719 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T11:56:31.262+02:00  INFO 52719 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T11:56:31.301+02:00  INFO 52719 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 10.998 seconds (process running for 11.781)
+2024-08-28T11:59:06.434+02:00  INFO 52719 --- [managementfighters] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T11:59:06.436+02:00  INFO 52719 --- [managementfighters] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T11:59:06.443+02:00  INFO 52719 --- [managementfighters] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-28T17:32:26.870+02:00  INFO 52719 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:32:26.898+02:00  INFO 52719 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T17:32:26.999+02:00  INFO 52719 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T17:32:29.785+02:00  INFO 85251 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 85251 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T17:32:29.838+02:00  INFO 85251 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T17:32:31.482+02:00  INFO 85251 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:32:31.487+02:00  INFO 85251 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T17:32:32.082+02:00  INFO 85251 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 571 ms. Found 1 JPA repository interface.
+2024-08-28T17:32:32.159+02:00  INFO 85251 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:32:32.162+02:00  INFO 85251 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T17:32:32.214+02:00  INFO 85251 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T17:32:32.220+02:00  INFO 85251 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 0 Redis repository interfaces.
+2024-08-28T17:32:33.397+02:00  INFO 85251 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T17:32:33.465+02:00  INFO 85251 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T17:32:33.467+02:00  INFO 85251 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T17:32:33.929+02:00  INFO 85251 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T17:32:33.930+02:00  INFO 85251 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3910 ms
+2024-08-28T17:32:34.459+02:00  INFO 85251 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T17:32:34.632+02:00  INFO 85251 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T17:32:34.744+02:00  INFO 85251 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T17:32:35.244+02:00  INFO 85251 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T17:32:35.327+02:00  INFO 85251 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T17:32:36.181+02:00  INFO 85251 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1592e540
+2024-08-28T17:32:36.186+02:00  INFO 85251 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T17:32:36.403+02:00  WARN 85251 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T17:32:38.578+02:00  INFO 85251 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T17:32:38.739+02:00  INFO 85251 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:32:39.515+02:00  WARN 85251 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T17:32:39.615+02:00  INFO 85251 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T17:32:39.781+02:00  INFO 85251 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T17:32:41.262+02:00  INFO 85251 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T17:32:41.287+02:00  INFO 85251 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.616 seconds (process running for 13.567)
+2024-08-28T17:33:03.762+02:00  INFO 85251 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:33:03.767+02:00  INFO 85251 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T17:33:03.785+02:00  INFO 85251 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T17:33:06.173+02:00  INFO 85587 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 85587 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T17:33:06.226+02:00  INFO 85587 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T17:33:08.077+02:00  INFO 85587 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:33:08.082+02:00  INFO 85587 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T17:33:08.468+02:00  INFO 85587 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 305 ms. Found 1 JPA repository interface.
+2024-08-28T17:33:08.568+02:00  INFO 85587 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:33:08.573+02:00  INFO 85587 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T17:33:08.711+02:00  INFO 85587 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T17:33:08.713+02:00  INFO 85587 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2024-08-28T17:33:10.202+02:00  INFO 85587 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T17:33:10.266+02:00  INFO 85587 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T17:33:10.269+02:00  INFO 85587 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T17:33:10.500+02:00  INFO 85587 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T17:33:10.501+02:00  INFO 85587 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4033 ms
+2024-08-28T17:33:10.862+02:00  INFO 85587 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T17:33:11.073+02:00  INFO 85587 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T17:33:11.172+02:00  INFO 85587 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T17:33:11.714+02:00  INFO 85587 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T17:33:11.811+02:00  INFO 85587 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T17:33:12.621+02:00  INFO 85587 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2739ecc0
+2024-08-28T17:33:12.628+02:00  INFO 85587 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T17:33:12.901+02:00  WARN 85587 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T17:33:15.482+02:00  INFO 85587 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T17:33:15.668+02:00  INFO 85587 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:33:16.802+02:00  WARN 85587 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T17:33:16.898+02:00  INFO 85587 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T17:33:17.170+02:00  INFO 85587 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T17:33:18.799+02:00  INFO 85587 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T17:33:18.890+02:00  INFO 85587 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 13.645 seconds (process running for 14.694)
+2024-08-28T17:34:28.370+02:00  INFO 85587 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T17:34:28.373+02:00  INFO 85587 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T17:34:28.384+02:00  INFO 85587 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2024-08-28T17:51:12.228+02:00  INFO 85587 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:51:12.300+02:00  INFO 85587 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T17:51:12.444+02:00  INFO 85587 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T17:51:15.570+02:00  INFO 92851 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 92851 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T17:51:15.578+02:00  INFO 92851 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T17:51:17.487+02:00  INFO 92851 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:51:17.491+02:00  INFO 92851 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T17:51:17.850+02:00  INFO 92851 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 310 ms. Found 1 JPA repository interface.
+2024-08-28T17:51:17.939+02:00  INFO 92851 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:51:17.943+02:00  INFO 92851 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T17:51:18.050+02:00  INFO 92851 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T17:51:18.056+02:00  INFO 92851 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+2024-08-28T17:51:19.676+02:00  INFO 92851 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T17:51:19.766+02:00  INFO 92851 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T17:51:19.768+02:00  INFO 92851 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T17:51:19.937+02:00  INFO 92851 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T17:51:19.939+02:00  INFO 92851 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4143 ms
+2024-08-28T17:51:20.327+02:00  INFO 92851 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T17:51:20.458+02:00  INFO 92851 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T17:51:20.557+02:00  INFO 92851 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T17:51:21.078+02:00  INFO 92851 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T17:51:21.185+02:00  INFO 92851 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T17:51:21.822+02:00  INFO 92851 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1592e540
+2024-08-28T17:51:21.826+02:00  INFO 92851 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T17:51:22.010+02:00  WARN 92851 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T17:51:23.585+02:00  INFO 92851 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T17:51:23.695+02:00  INFO 92851 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:51:24.435+02:00  WARN 92851 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T17:51:24.494+02:00  INFO 92851 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T17:51:24.785+02:00  INFO 92851 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T17:51:26.299+02:00  INFO 92851 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T17:51:26.362+02:00  INFO 92851 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.388 seconds (process running for 13.353)
+2024-08-28T17:52:14.899+02:00  INFO 92851 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:52:14.907+02:00  INFO 92851 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T17:52:14.927+02:00  INFO 92851 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T17:52:17.403+02:00  INFO 93380 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 93380 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T17:52:17.413+02:00  INFO 93380 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T17:52:19.196+02:00  INFO 93380 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:52:19.217+02:00  INFO 93380 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T17:52:19.707+02:00  INFO 93380 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 442 ms. Found 1 JPA repository interface.
+2024-08-28T17:52:19.802+02:00  INFO 93380 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T17:52:19.815+02:00  INFO 93380 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T17:52:19.866+02:00  INFO 93380 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T17:52:19.867+02:00  INFO 93380 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2024-08-28T17:52:21.029+02:00  INFO 93380 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T17:52:21.064+02:00  INFO 93380 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T17:52:21.065+02:00  INFO 93380 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T17:52:21.210+02:00  INFO 93380 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T17:52:21.211+02:00  INFO 93380 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3645 ms
+2024-08-28T17:52:21.685+02:00  INFO 93380 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T17:52:21.820+02:00  INFO 93380 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T17:52:21.896+02:00  INFO 93380 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T17:52:22.391+02:00  INFO 93380 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T17:52:22.456+02:00  INFO 93380 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T17:52:23.024+02:00  INFO 93380 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e2772a9
+2024-08-28T17:52:23.027+02:00  INFO 93380 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T17:52:23.129+02:00  WARN 93380 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T17:52:24.778+02:00  INFO 93380 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T17:52:24.864+02:00  INFO 93380 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T17:52:25.458+02:00  WARN 93380 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T17:52:25.527+02:00  INFO 93380 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T17:52:25.656+02:00  INFO 93380 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T17:52:27.097+02:00  INFO 93380 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T17:52:27.133+02:00  INFO 93380 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 10.61 seconds (process running for 11.485)
+2024-08-28T17:53:22.166+02:00  INFO 93380 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T17:53:22.167+02:00  INFO 93380 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T17:53:22.175+02:00  INFO 93380 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-28T18:33:40.348+02:00  INFO 93380 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T18:33:40.378+02:00  INFO 93380 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T18:33:40.407+02:00  INFO 93380 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-28T18:33:43.158+02:00  INFO 2942 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Starting ManagementfightersApplication using Java 17.0.6 with PID 2942 (/Users/fkahope/Java/ufcManagement/managementfighters/target/classes started by fkahope in /Users/fkahope/Java/ufcManagement/managementfighters)
+2024-08-28T18:33:43.164+02:00  INFO 2942 --- [managementfighters] [main] u.m.ManagementfightersApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-08-28T18:33:45.320+02:00  INFO 2942 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T18:33:45.324+02:00  INFO 2942 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-28T18:33:45.688+02:00  INFO 2942 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 292 ms. Found 1 JPA repository interface.
+2024-08-28T18:33:45.860+02:00  INFO 2942 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-28T18:33:45.865+02:00  INFO 2942 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-08-28T18:33:45.982+02:00  INFO 2942 --- [managementfighters] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface ufc.managementfighters.repository.AppUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-08-28T18:33:45.984+02:00  INFO 2942 --- [managementfighters] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2024-08-28T18:33:48.042+02:00  INFO 2942 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-28T18:33:48.115+02:00  INFO 2942 --- [managementfighters] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-28T18:33:48.115+02:00  INFO 2942 --- [managementfighters] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-28T18:33:48.285+02:00  INFO 2942 --- [managementfighters] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-28T18:33:48.286+02:00  INFO 2942 --- [managementfighters] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4955 ms
+2024-08-28T18:33:48.616+02:00  INFO 2942 --- [managementfighters] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-28T18:33:48.754+02:00  INFO 2942 --- [managementfighters] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-28T18:33:48.845+02:00  INFO 2942 --- [managementfighters] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-28T18:33:49.367+02:00  INFO 2942 --- [managementfighters] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-28T18:33:49.451+02:00  INFO 2942 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-28T18:33:50.046+02:00  INFO 2942 --- [managementfighters] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b400bd0
+2024-08-28T18:33:50.058+02:00  INFO 2942 --- [managementfighters] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-28T18:33:50.240+02:00  WARN 2942 --- [managementfighters] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.34 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-08-28T18:33:51.909+02:00  INFO 2942 --- [managementfighters] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-28T18:33:52.002+02:00  INFO 2942 --- [managementfighters] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T18:33:52.634+02:00  WARN 2942 --- [managementfighters] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-28T18:33:52.722+02:00  INFO 2942 --- [managementfighters] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name appUserService
+2024-08-28T18:33:52.884+02:00  INFO 2942 --- [managementfighters] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-28T18:33:54.360+02:00  INFO 2942 --- [managementfighters] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-28T18:33:54.415+02:00  INFO 2942 --- [managementfighters] [main] u.m.ManagementfightersApplication        : Started ManagementfightersApplication in 12.32 seconds (process running for 13.245)
+2024-08-28T18:37:57.554+02:00  INFO 2942 --- [managementfighters] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-28T18:37:57.556+02:00  INFO 2942 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-28T18:37:57.562+02:00  INFO 2942 --- [managementfighters] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-08-28T18:44:03.313+02:00 ERROR 2942 --- [managementfighters] [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.io.File.getAbsolutePath()" because "imageFile" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.io.File.getAbsolutePath()" because "imageFile" is null
+	at ufc.managementfighters.controllers.AccountController.getImage(AccountController.java:154) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2024-08-28T18:44:03.796+02:00 ERROR 2942 --- [managementfighters] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.io.File.getAbsolutePath()" because "imageFile" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.io.File.getAbsolutePath()" because "imageFile" is null
+	at ufc.managementfighters.controllers.AccountController.getImage(AccountController.java:154) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.3.1.jar:6.3.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2024-08-28T18:50:28.398+02:00  INFO 2942 --- [managementfighters] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-28T18:50:28.406+02:00  INFO 2942 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-28T18:50:28.422+02:00  INFO 2942 --- [managementfighters] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

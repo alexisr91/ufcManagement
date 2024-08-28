@@ -67,7 +67,7 @@
                 </div>
     
                 <div class="mb-3 flex flex-col lg:flex-row">
-                    <label class="lg:w-1/3 mb-2 lg:mb-0">Phone*</label>
+                    <label class="lg:w-1/3 mb-2 lg:mb-0">Phone</label>
                     <div class="lg:w-2/3">
                         <input class="form-control w-full p-2 border rounded" th:field="${registerDto.phone}">
                         <p th:if="${#fields.hasErrors('phone')}" th:errorclass="text-red-700 " th:errors="${registerDto.phone}"></p>
@@ -76,18 +76,18 @@
                 
                 
 
-                    <div class="mb-3 flex flex-col lg:flex-row">
-                        <label class="lg:w-1/3 mb-2 lg:mb-0">IMAGE</label>
-                        <div class="lg:w-2/3">
-                            <input class="form-control w-full p-2 border rounded" th:field="${registerDto.image}" type="file">
-                            <p th:if="${#fields.hasErrors('image')}" th:errorclass="text-red-700 " th:errors="${registerDto.image}"></p>
-                        </div>
+                <div class="mb-3 flex flex-col lg:flex-row">
+                    <label class="lg:w-1/3 mb-2 lg:mb-0">IMAGE</label>
+                    <div class="lg:w-2/3">
+                        <input class="form-control w-full p-2 border rounded" th:field="${registerDto.image}" type="file">
+                        <p th:if="${#fields.hasErrors('image')}" th:errorclass="text-red-700 " th:errors="${registerDto.image}"></p>
                     </div>
-                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+                
                 
     
                 <div class="mb-3 flex flex-col lg:flex-row">
-                    <label class="lg:w-1/3 mb-2 lg:mb-0">Password</label>
+                    <label class="lg:w-1/3 mb-2 lg:mb-0">Password*</label>
                     <div class="lg:w-2/3">
                         <input class="form-control w-full p-2 border rounded" th:field="${registerDto.password}" type="password">
                         <p th:if="${#fields.hasErrors('password')}" th:errorclass="text-red-700 " th:errors="${registerDto.password}"></p>
@@ -95,7 +95,7 @@
                 </div>
     
                 <div class="mb-3 flex flex-col lg:flex-row">
-                    <label class="lg:w-1/3 mb-2 lg:mb-0">Confirm Password</label>
+                    <label class="lg:w-1/3 mb-2 lg:mb-0">Confirm Password*</label>
                     <div class="lg:w-2/3">
                         <input class="form-control w-full p-2 border rounded" th:field="${registerDto.confirmPassword}" type="password">
                         <p th:if="${#fields.hasErrors('confirmPassword')}" th:errorclass="text-red-700 " th:errors="${registerDto.confirmPassword}"></p>
